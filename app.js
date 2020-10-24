@@ -2,7 +2,6 @@ function getRepository(username) {
     fetch (`https://api.github.com/users/${username}/repos`)
        .then(response => {
            if(response.ok) {
-               console.log(response.json());
                return response.json();
            }
        })
@@ -30,7 +29,8 @@ function displayResults(responseJson) {
     let i = 0;
     for (let i = 0; i < responseJson.length; i++)
     $('#target').append(`<li>
-        <p></p>
+        <p>${responseJson[i].name}</p>
+        <p><a href="${responseJson[i].git_url}">${responseJson[i].name}</a></p>
     </li>`)
     $('#results').removeClass('hidden');    
 }
