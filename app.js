@@ -25,6 +25,7 @@ function onSubmit() {
 }
 
 function displayResults(responseJson) {
+    console.log(responseJson);
     $('#target').empty();
     let i = 0;
     for (let i = 0; i < responseJson.length; i++)
