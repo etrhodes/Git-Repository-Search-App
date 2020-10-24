@@ -30,7 +30,7 @@ function displayResults(responseJson) {
     for (let i = 0; i < responseJson.length; i++)
     $('#target').append(`<li>
         <p>${responseJson[i].name}</p>
-        <p><a href="${responseJson[i].git_url}">${responseJson[i].name}</a></p>
+        <p><a href="${responseJson[i].html_url}">Link to repository: ${responseJson[i].name}</a></p>
     </li>`)
     $('#results').removeClass('hidden');    
 }
